@@ -1,17 +1,19 @@
 package org.booking.testcases;
 
 import basetest.BaseTest;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.zigwheels.pages.HomePage;
+import org.zigwheels.pages.BookingDetails;
 import org.zigwheels.pages.PropertyDetailsPage;
 
-import java.io.IOException;
+
+import java.util.List;
 
 public class TC_03 extends BaseTest {
 
     @Test
-    public void checkDetails() throws InterruptedException {
+    public void getTopFiveProperties() throws InterruptedException {
+
         HomePage hp = new HomePage(driver);
         hp.closePop();
         Thread.sleep(1000);
@@ -24,5 +26,13 @@ public class TC_03 extends BaseTest {
         hp.search();
         PropertyDetailsPage prop = new PropertyDetailsPage(driver);
         prop.goToHotel();
+
+        BookingDetails resultsPage = new BookingDetails(driver);
+
+        List<String> properties = resultsPage.getTopFivePropertyDetails();
+
+        for (String property : properties) {
+            System.out.println(property);
+        }
     }
 }
