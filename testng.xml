@@ -1,0 +1,29 @@
+<suite name="Suite">
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+    <test name="Test">
+        <classes>
+            <class name="org.zigwheels.tests.TC_1GetURL"/>
+            <class name="org.zigwheels.tests.TC_2Bikes"/>
+<!--            <class name="org.zigwheels.tests.TC_3UpcomingDisplayed"/>-->
+<!--            <class name="org.zigwheels.tests.TC_4AllBksUndr5lkhs"/>-->
+<!--            <class name="org.zigwheels.tests.TC_5AllBksRylEnField"/>-->
+<!--            <class name="org.zigwheels.tests.TC_6AllBikes"/>-->
+<!--            <class name="org.zigwheels.tests.TC_7AlrtMe"/>-->
+<!--            <class name="org.zigwheels.tests.TC_8Cars"/>-->
+<!--            <class name="org.zigwheels.tests.TC_9CarsURL"/>-->
+<!--            <class name="org.zigwheels.tests.TC_10Location"/>-->
+<!--            <class name="org.zigwheels.tests.TC_11UsedCarsInChennai"/>-->
+<!--            <class name="org.zigwheels.tests.TC_12CarsTable"/>-->
+<!--            <class name="org.zigwheels.tests.TC_13DuplicateBikes"/>-->
+<!--            <class name="org.zigwheels.tests.TC_14DuplicateCars"/>-->
+<!--            <class name="org.zigwheels.tests.TC_15GoogleDIsplayed"/>-->
+<!--            <class name="org.zigwheels.tests.TC_16VEmailInPwd"/>-->
+<!--            <class name="org.zigwheels.tests.TC_17InvalidEmail"/>-->
+<!--            <class name="org.zigwheels.tests.TC_18InvalidPhNo"/>-->
+<!--            <class name="org.zigwheels.tests.TC_19VPhnoInvalidPwd"/>-->
+<!--            <class name="org.zigwheels.tests.TC_20EmptyEmail"/>-->
+        </classes>
+    </test>
+</suite>
