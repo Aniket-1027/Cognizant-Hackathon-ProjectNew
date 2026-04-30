@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utilities.WaitUtils;
 
 import java.time.Duration;
 
@@ -16,7 +18,7 @@ public class PropertyDetailsPage {
 
     By location = (By.xpath("//*[contains(text(),'Nairobi') and contains(text(),'Kenya')])[3]"));
 
-    @FindBy(xpath="//*[contains(text(),'Languages spoken')]/following::div[1]")
+    @FindBy(xpath="//div[.//span[text()='Languages spoken']]//span[contains(@class,'bui-list__item')]")
     WebElement languagesSection;
 
 
@@ -28,7 +30,8 @@ public class PropertyDetailsPage {
 
     public String getLocation() {
         try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(location)).getText();
+            WaitUtils.sleep(1000);
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(location)).getAttribute("value");
         } catch (Exception e) {
             return "Location not found";
         }
@@ -36,7 +39,8 @@ public class PropertyDetailsPage {
 
     public String getLanguages() {
         try {
-            return languagesSection.getText();
+            WaitUtils.sleep(1000);
+            return languagesSection.getAttribute("value");
         } catch (Exception e) {
             return "Languages not found";
         }
