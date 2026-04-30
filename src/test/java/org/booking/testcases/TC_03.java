@@ -27,16 +27,28 @@ public class TC_03 extends BaseTest {
         PropertyDetailsPage prop = new PropertyDetailsPage(driver);
 
         BookingDetails resultsPage = new BookingDetails(driver);
-        String location = prop.getLocation();
-        String languages = prop.getLanguages();
 
         List<String> properties = resultsPage.getTopFivePropertyDetails();
         List<String> links = resultsPage.getTopFivePropertyLinks();
 
-        for (String property : properties) {
-            System.out.println(property);
+
+
+        for (int i = 0; i < links.size(); i++) {
+
+            driver.get(links.get(i));
+
+            String location = prop.getLocation();
+            String languages = prop.getLanguages();
+
+            System.out.println(properties.get(i));
             System.out.println("Location: " + location);
             System.out.println("Languages: " + languages);
+            System.out.println("================================");
+
+            driver.navigate().back();
+            resultsPage.getTopFiveCards();
         }
+
+
     }
 }

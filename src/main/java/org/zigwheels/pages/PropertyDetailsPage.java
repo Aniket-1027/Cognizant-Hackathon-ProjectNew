@@ -12,13 +12,15 @@ public class PropertyDetailsPage {
     WebDriver driver;
     WebDriverWait wait;
 
-    By location = By.xpath("//span[@data-testid='address']");
+    By location = By.xpath("(//*[contains(text(),'Nairobi') and contains(text(),'Kenya')])[3]");
     By languagesSection = By.xpath("//*[contains(text(),'Languages spoken')]/following::div[1]");
+
 
     public PropertyDetailsPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+
 
     public String getLocation() {
         try {

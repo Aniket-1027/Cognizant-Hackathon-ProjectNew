@@ -51,6 +51,9 @@ public class BookingDetails {
 
         return result;
     }
+    public void openPropertyByUrl(String url) {
+        driver.get(url);
+    }
 
     public List<String> getTopFivePropertyLinks() {
 
@@ -69,4 +72,6 @@ public class BookingDetails {
 
         return links;
     }
+
+
 }
