@@ -4,8 +4,8 @@ package org.booking.testcases.soumik;
 import basetest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.zigwheels.pages.HomePage;
-import org.zigwheels.pages.PropertyDetailsPage;
+import org.booking.pages.HomePage;
+import org.booking.pages.PropertyDetailsPage;
 import utilities.Log;
 
 public class TC_03_VerifyHolidayHomeLocationVisibilityTest extends BaseTest {

@@ -3,17 +3,12 @@ package org.booking.testcases.aniket;
 import basetest.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import org.zigwheels.pages.HomePage;
-import org.zigwheels.pages.HotelSearchPage;
-import org.zigwheels.pages.PropertyDetailsPage;
-
-import java.time.Duration;
+import org.booking.pages.HomePage;
+import org.booking.pages.HotelSearchPage;
+import org.booking.pages.PropertyDetailsPage;
 
 public class TC_07_VerifyBookingComWithFirefox extends BaseTest {
 

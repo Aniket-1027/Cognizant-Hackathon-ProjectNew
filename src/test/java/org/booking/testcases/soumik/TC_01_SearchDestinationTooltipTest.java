@@ -3,7 +3,7 @@ package org.booking.testcases.soumik;
 import basetest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.zigwheels.pages.HomePage;
+import org.booking.pages.HomePage;
 import utilities.Log;
 
 

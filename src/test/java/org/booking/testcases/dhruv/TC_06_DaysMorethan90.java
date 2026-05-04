@@ -4,7 +4,7 @@ import basetest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import org.zigwheels.pages.HomePage;
+import org.booking.pages.HomePage;
 
 public class TC_06_DaysMorethan90 extends BaseTest {
     @Test
