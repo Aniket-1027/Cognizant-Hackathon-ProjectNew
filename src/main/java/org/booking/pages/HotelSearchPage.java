@@ -170,4 +170,9 @@ public class HotelSearchPage {
     public List <WebElement> getReviewLabels() {
         return reviewLabels;
     }
+
+    public String getSmartFilterText(){
+        String value = smartFilterTextArea.getAttribute("value");
+        return value;
+    }
 }
