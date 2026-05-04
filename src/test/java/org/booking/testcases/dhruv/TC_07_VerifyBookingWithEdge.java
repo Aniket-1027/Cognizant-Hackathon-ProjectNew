@@ -1,17 +1,11 @@
 package org.booking.testcases.dhruv;
 
 import basetest.BaseTest;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.zigwheels.pages.HomePage;
-import org.zigwheels.pages.HotelSearchPage;
-import org.zigwheels.pages.PropertyDetailsPage;
-
-import java.time.Duration;
+import org.booking.pages.HomePage;
+import org.booking.pages.HotelSearchPage;
+import org.booking.pages.PropertyDetailsPage;
 
 public class TC_07_VerifyBookingWithEdge extends BaseTest {
 //    @BeforeMethod

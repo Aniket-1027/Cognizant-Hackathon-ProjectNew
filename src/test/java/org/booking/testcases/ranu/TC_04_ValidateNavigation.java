@@ -5,9 +5,9 @@ package org.booking.testcases.ranu;
 import basetest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.zigwheels.pages.HomePage;
-import org.zigwheels.pages.HotelSearchPage;
-import org.zigwheels.pages.PropertyDetailsPage;
+import org.booking.pages.HomePage;
+import org.booking.pages.HotelSearchPage;
+import org.booking.pages.PropertyDetailsPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

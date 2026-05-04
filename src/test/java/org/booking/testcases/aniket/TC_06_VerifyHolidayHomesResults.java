@@ -3,12 +3,11 @@ package org.booking.testcases.aniket;
 import basetest.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import org.zigwheels.pages.HomePage;
-import org.zigwheels.pages.HotelSearchPage;
-import org.zigwheels.pages.PropertyDetailsPage;
+import org.booking.pages.HomePage;
+import org.booking.pages.HotelSearchPage;
+import org.booking.pages.PropertyDetailsPage;
 
 public class TC_06_VerifyHolidayHomesResults extends BaseTest {
     private static final Logger log = LogManager.getLogger(TC_06_VerifyHolidayHomesResults.class);

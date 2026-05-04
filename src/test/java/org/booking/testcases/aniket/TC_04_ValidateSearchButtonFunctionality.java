@@ -3,10 +3,9 @@ package org.booking.testcases.aniket;
 import basetest.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import org.zigwheels.pages.HomePage;
+import org.booking.pages.HomePage;
 
 public class TC_04_ValidateSearchButtonFunctionality extends BaseTest {
 
