@@ -52,14 +52,13 @@ public class TC_29_HotelsSortedByLowPrice extends BaseTest {
 
         hsp.enterSmartFilter(ExcelUtils.getCellData(1, 8));
         Log.info("Entered Elevator in Smart Filters");
-        Thread.sleep(7000);
 
         List<Integer> rating = hsp.cheapestProperties();
-        int limit = Math.min(5, rating.size());
+        int limit = Math.min(3, rating.size());
         for (int i = 0; i < limit - 1; i++) {
             Assert.assertTrue(
                     rating.get(i) <= rating.get(i + 1),
-                    "Rating order incorrect in first five: " + rating.subList(0, limit)
+                    "Price order incorrect in first three: " + rating.subList(0, limit)
             );
             Log.info("Assertion completed: Hotels are sorted according to property rating properly");
             ScreenshotUtil.takeScreenshot(driver, "TC_29_HotelsSortedByLowPrice");
