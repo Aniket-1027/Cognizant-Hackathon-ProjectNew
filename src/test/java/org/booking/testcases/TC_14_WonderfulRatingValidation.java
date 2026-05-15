@@ -8,6 +8,7 @@ import org.booking.pages.HotelSearchPage;
 import utilities.ExcelUtils;
 import utilities.Log;
 import utilities.ScreenshotUtil;
+import utilities.WaitUtils;
 
 import java.io.IOException;
 
@@ -51,7 +52,7 @@ public class TC_14_WonderfulRatingValidation extends BaseTest {
 
         Log.info("Validating review labels shown on search results");
         for (WebElement label : hsp.getReviewLabels()) {
-            Thread.sleep(2000);
+            WaitUtils.waitForElementToBeVisible(label);
             String text = label.getText();
             Log.info("Review label found: "+ text);
             softAssert.assertTrue(

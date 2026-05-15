@@ -49,10 +49,10 @@ public class HotelSearchPage {
     @FindBy(xpath="//div[@data-filters-group='review_score']//input[starts-with(@aria-label, 'Wonderful')]")
     WebElement checkboxForWonderfulFilter;
 
-    @FindBy(xpath="//div[contains(@id, 'filter_group_ht_id_:r1d:')]//input[contains(@aria-label, 'Vacation Homes')]")
+    @FindBy(xpath="//div[contains(@id, 'filter_group_ht_id')]//input[contains(@aria-label, 'Vacation Homes')]")
     WebElement checkboxForVacationHomesFilter;
 
-    @FindBy(xpath="//div[contains(@id, 'filter_group_ht_id_:r1d:')]//input[starts-with(@aria-label, 'Hotels')]")
+    @FindBy(xpath="//div[contains(@id, 'filter_group_ht_id')]//input[starts-with(@aria-label, 'Hotels')]")
     WebElement checkboxForHotelsFilter;
 
     @FindBy(xpath="//button[@aria-label='Elevator']//span[text()='Elevator']")
@@ -70,7 +70,7 @@ public class HotelSearchPage {
     @FindBy(xpath = "//div[@id=':r1l:-note']")
     WebElement emptySmartFilter;
 
-    @FindBy(xpath = "//span[normalize-space()='Sort by:']")
+    @FindBy(xpath = "//button[@data-testid='sorters-dropdown-trigger']")
     WebElement sortButton;
 
     @FindBy(xpath = "//span[normalize-space()='Property rating (high to low)']")
@@ -104,6 +104,7 @@ public class HotelSearchPage {
 
     public void clickHotelsOption(){
         try{
+            WaitUtils.waitForElementToBeVisible(checkVacationOption);
             WaitUtils.waitForElementToBeClickable(checkHotelsOption);
             try{
                 checkHotelsOption.click();
@@ -155,14 +156,20 @@ public class HotelSearchPage {
     }
 
     public boolean isWonderfulFilterApplied(){
+        js.executeScript("arguments[0].scrollIntoView();",checkWonderfulOption);
+        WaitUtils.waitForElementToBeVisible(checkWonderfulOption);
         return checkboxForWonderfulFilter.isSelected();
     }
 
     public boolean isVacationHomesFilterApplied(){
+        js.executeScript("arguments[0].scrollIntoView();",checkVacationOption);
+        WaitUtils.waitForElementToBeVisible(checkVacationOption);
         return checkboxForVacationHomesFilter.isSelected();
     }
 
     public boolean isHotelsFilterApplied(){
+        js.executeScript("arguments[0].scrollIntoView();",checkHotelsOption);
+        WaitUtils.waitForElementToBeVisible(checkHotelsOption);
         return checkboxForHotelsFilter.isSelected();
     }
 
@@ -171,6 +178,8 @@ public class HotelSearchPage {
     }
 
     public boolean isSmartFilterApplied(){
+        js.executeScript("arguments[0].scrollIntoView();",noMatchingFilter);
+        WaitUtils.waitForElementToBeVisible(noMatchingFilter);
         return !noMatchingFilter.isDisplayed();
     }
 
@@ -197,6 +206,7 @@ public class HotelSearchPage {
     }
 
     public List<Integer> topReviewedProperties(){
+        WaitUtils.waitForElementToBeVisible(elevatorSelection);
         sortButton.click();
         topReviewedProperties.click();
         List<Integer> rating = new ArrayList<>();
@@ -207,6 +217,7 @@ public class HotelSearchPage {
     }
 
     public List<Integer> cheapestProperties(){
+        WaitUtils.waitForElementToBeVisible(elevatorSelection);
         sortButton.click();
         cheapestPrices.click();
         List <Integer> price = new ArrayList<>();

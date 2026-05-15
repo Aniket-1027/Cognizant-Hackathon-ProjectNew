@@ -52,10 +52,6 @@ public class TC_28_HotelSelectedByPropertyRating extends BaseTest {
 
         hsp.enterSmartFilter(ExcelUtils.getCellData(1, 8));
         Log.info("Entered Elevator in Smart Filters");
-        Thread.sleep(7000);
-        hsp.topReviewedProperties();
-
-        Thread.sleep(2000);
 
         List<Integer> rating = hsp.topReviewedProperties();
         int limit = Math.min(5, rating.size());

@@ -15,9 +15,12 @@ public class TC_24_SearchDestinationTooltipTest extends BaseTest {
         Log.info("TEST STARTED : Verify Destination Tooltip Validation");
         Log.info("Initializing Home Page");
         HomePage hp = new HomePage(driver);
+
         hp.closePop();
+
         Log.info("Clicking Search button without entering destination");
         hp.search();
+
         Log.info("Fetching destination tooltip validation message");
         String actualError = hp.getDestinationTooltipText();
         Log.info("Validation message displayed: "+ actualError);
